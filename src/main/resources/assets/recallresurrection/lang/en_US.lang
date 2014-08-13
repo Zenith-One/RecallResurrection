@@ -1,0 +1,70 @@
+itemGroup.RecallResurrection=Recall
+bindstone.notOwned=Not bound to anyone
+bindstone.ownedBy=Owned By
+bindstone.boundLocation=Bound location
+bindstone.noLocation=No location bound
+bindstone.locationBound=Recall: Location bound
+bindstone.boundToOther=Recall: This Bindstone is owned by someone else.
+
+recall.dimname.0=Overworld
+recall.dimname.-1=Nether
+recall.dimname.1=The End
+recall.dimname.7=Twilight Forest
+
+scroll.noLocation=Recall: No location bound for scroll
+
+item.RecallResurrection:bindstone.blank.name=Blank Bindstone
+item.RecallResurrection:bindstone.black.name=Bindstone of the Stalker
+item.RecallResurrection:bindstone.blue.name=Bindstone of the Oathmaker
+item.RecallResurrection:bindstone.brown.name=Bindstone of the Builder
+item.RecallResurrection:bindstone.cyan.name=Bindstone of the Guardian
+item.RecallResurrection:bindstone.darkGray.name=Bindstone of the Nemesis
+item.RecallResurrection:bindstone.green.name=Bindstone of the Sower
+item.RecallResurrection:bindstone.lightBlue.name=Bindstone of the Wanderer
+item.RecallResurrection:bindstone.lightGray.name=Bindstone of the Arbiter
+item.RecallResurrection:bindstone.lime.name=Bindstone of the Trickster
+item.RecallResurrection:bindstone.magenta.name=Bindstone of the Advisor
+item.RecallResurrection:bindstone.orange.name=Bindstone of the Muse
+item.RecallResurrection:bindstone.pink.name=Bindstone of the All-Mother
+item.RecallResurrection:bindstone.purple.name=Bindstone of the Seer
+item.RecallResurrection:bindstone.red.name=Bindstone of the Conjurer
+item.RecallResurrection:bindstone.white.name=Bindstone of the Lorekeeper
+item.RecallResurrection:bindstone.yellow.name=Bindstone of the Herald
+
+item.RecallResurrection:scroll.blank.name=Blank Scroll
+item.RecallResurrection:scroll.black.name=Scroll of the Stalker
+item.RecallResurrection:scroll.blue.name=Scroll of the Oathmaker
+item.RecallResurrection:scroll.brown.name=Scroll of the Builder
+item.RecallResurrection:scroll.cyan.name=Scroll of the Guardian
+item.RecallResurrection:scroll.darkGray.name=Scroll of the Nemesis
+item.RecallResurrection:scroll.green.name=Scroll of the Sower
+item.RecallResurrection:scroll.lightBlue.name=Scroll of the Wanderer
+item.RecallResurrection:scroll.lightGray.name=Scroll of the Arbiter
+item.RecallResurrection:scroll.lime.name=Scroll of the Trickster
+item.RecallResurrection:scroll.magenta.name=Scroll of the Advisor
+item.RecallResurrection:scroll.orange.name=Scroll of the Muse
+item.RecallResurrection:scroll.pink.name=Scroll of the All-Mother
+item.RecallResurrection:scroll.purple.name=Scroll of the Seer
+item.RecallResurrection:scroll.red.name=Scroll of the Conjurer
+item.RecallResurrection:scroll.white.name=Scroll of the Lorekeeper
+item.RecallResurrection:scroll.yellow.name=Scroll of the Herald
+
+item.RecallResurrection:ink.blank.name=Empty Ink Vial
+item.RecallResurrection:ink.black.name=Ink of the Stalker
+item.RecallResurrection:ink.blue.name=Ink of the Oathmaker
+item.RecallResurrection:ink.brown.name=Ink of the Builder
+item.RecallResurrection:ink.cyan.name=Ink of the Guardian
+item.RecallResurrection:ink.darkGray.name=Ink of the Nemesis
+item.RecallResurrection:ink.green.name=Ink of the Sower
+item.RecallResurrection:ink.lightBlue.name=Ink of the Wanderer
+item.RecallResurrection:ink.lightGray.name=Ink of the Arbiter
+item.RecallResurrection:ink.lime.name=Ink of the Trickster
+item.RecallResurrection:ink.magenta.name=Ink of the Advisor
+item.RecallResurrection:ink.orange.name=Ink of the Muse
+item.RecallResurrection:ink.pink.name=Ink of the All-Mother
+item.RecallResurrection:ink.purple.name=Ink of the Seer
+item.RecallResurrection:ink.red.name=Ink of the Conjurer
+item.RecallResurrection:ink.white.name=Ink of the Lorekeeper
+item.RecallResurrection:ink.yellow.name=Ink of the Herald
+
+item.RecallResurrection:mortarAndPestle.name=Wayfarer's Mortar and Pestle

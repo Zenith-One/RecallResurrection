@@ -3,7 +3,6 @@ package zenithmods.recall;
 import net.minecraft.item.Item;
 import zenithmods.recall.items.ItemBindstone;
 import zenithmods.recall.items.ItemInk;
-import zenithmods.recall.items.ItemMortarAndPestle;
 import zenithmods.recall.items.ItemScroll;
 import zenithmods.recall.items.RecallCraftingItem;
 import cpw.mods.fml.common.registry.GameRegistry;

@@ -1,0 +1,16 @@
+[
+{
+  "modid": "RecallResurrection",
+  "name": "Recall Resurrection",
+  "description": "A balanced personal teleportation mod.",
+  "version": "0.0.1",
+  "mcversion": "1.7.10",
+  "url": "https://github.com/Zenith-One/RecallResurrection",
+  "updateUrl": "",
+  "authors": ["zenith"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

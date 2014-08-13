@@ -47,8 +47,8 @@ public class RecallTransporter {
 			
             
         } else {
-        	System.out.println("World is remote? " + entity.worldObj.isRemote);
-        	System.out.println("Entity is dead?" + entity.isDead);
+        	//System.out.println("World is remote? " + entity.worldObj.isRemote);
+        	//System.out.println("Entity is dead?" + entity.isDead);
         }
     
 		

@@ -5,11 +5,14 @@ bindstone.boundLocation=Bound location
 bindstone.noLocation=No location bound
 bindstone.locationBound=Recall: Location bound
 bindstone.boundToOther=Recall: This Bindstone is owned by someone else.
+bindstone.you=You
 
 recall.dimname.0=Overworld
 recall.dimname.-1=Nether
 recall.dimname.1=The End
 recall.dimname.7=Twilight Forest
+
+ink.usesRemaining=Uses remaining
 
 scroll.noLocation=Recall: No location bound for scroll
 
@@ -67,4 +70,5 @@ item.RecallResurrection:ink.red.name=Ink of the Conjurer
 item.RecallResurrection:ink.white.name=Ink of the Lorekeeper
 item.RecallResurrection:ink.yellow.name=Ink of the Herald
 
-item.RecallResurrection:mortarAndPestle.name=Wayfarer's Mortar and Pestle
+item.RecallResurrection:crafting.mortarAndPestle.name=Wayfarer's Mortar and Pestle
+item.RecallResurrection:crafting.pearlDust.name=Crushed Pearl

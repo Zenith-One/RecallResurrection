@@ -27,13 +27,13 @@ public class RecallRegistry {
 	        {
 	            NBTTagCompound playerTag = (NBTTagCompound)playerTagList.getCompoundTagAt(i);
 	            String playerName = playerTag.getString("player");
-	            System.out.println("Reading locations for "+playerName);
+	            //System.out.println("Reading locations for "+playerName);
 	            HashMap<String, BoundLocation> playerLocs = new HashMap<String, BoundLocation>();
 	            NBTTagList playerLocsList = (NBTTagList)playerTag.getTag("locations");
 	            for (int j = 0; j < playerLocsList.tagCount(); j++){
 	            	NBTTagCompound typeTag = (NBTTagCompound)playerLocsList.getCompoundTagAt(j);
 	            	String type = typeTag.getString("type");
-	            	System.out.println("Getting location for "+type);
+	            	//System.out.println("Getting location for "+type);
 	            	BoundLocation boundLoc = BoundLocation.readFromNBT((NBTTagCompound)typeTag.getTag("location"));
 	            	playerLocs.put(type, boundLoc);
 	            }
@@ -44,20 +44,20 @@ public class RecallRegistry {
 	
 	public static NBTTagCompound writeToNBT(NBTTagCompound nbt){
 		HashMap<String, HashMap<String, BoundLocation>> locs = INSTANCE.locations;
-		System.out.println("Writing to NBT");
+		//System.out.println("Writing to NBT");
 		if (locs.size() > 0){
 			NBTTagList playerTagList = new NBTTagList();
 			for (String player : locs.keySet()){
 				NBTTagCompound tag = new NBTTagCompound();
 				tag.setString("player", player);
-				System.out.println("Writing locations for "+player);
+				//System.out.println("Writing locations for "+player);
 				if (locs.get(player).size() > 0){
 					HashMap<String, BoundLocation> playerLocs = locs.get(player);
 					NBTTagList playerLocsList = new NBTTagList();
 					for (String type : playerLocs.keySet()){
 						NBTTagCompound typeTag = new NBTTagCompound();
 						typeTag.setString("type", type);
-						System.out.println("  Writing "+type);
+						//System.out.println("  Writing "+type);
 						NBTTagCompound locTag = new NBTTagCompound();
 						locTag = playerLocs.get(type).writeToNBT(locTag);
 						typeTag.setTag("location", locTag);
@@ -76,11 +76,6 @@ public class RecallRegistry {
 	}
 	
 	public static void bind(EntityPlayer player, RecallSubtype type, Coord6D coords, String name){
-		if (player.worldObj.isRemote){
-			System.out.println("server");
-		} else {
-			System.out.println("client");
-		}
 		HashMap<String, BoundLocation> playerLocations;
 		if (INSTANCE.locations.containsKey(player.getDisplayName())){
 			playerLocations = INSTANCE.locations.get(player.getDisplayName());
@@ -118,14 +113,14 @@ public class RecallRegistry {
 	public static void printLocations(){
 		if (INSTANCE.locations.size() > 0){
 			for (String player : INSTANCE.locations.keySet()){
-				System.out.println(player + ": ");
+				//System.out.println(player + ": ");
 				HashMap<String, BoundLocation> playerLocs = INSTANCE.locations.get(player);
 				if (! (playerLocs.size() > 0)){
-					System.out.println("No locations");
+					//System.out.println("No locations");
 				} else {
 					for (String type : playerLocs.keySet()){
 						Coord6D coords = playerLocs.get(type).getCoords();
-						System.out.println("  " + type + ": "+coords.x + ", " + coords.y + ", " + coords.z + "; " + coords.dimension);
+						//System.out.println("  " + type + ": "+coords.x + ", " + coords.y + ", " + coords.z + "; " + coords.dimension);
 					}
 				}
 			}

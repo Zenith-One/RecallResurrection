@@ -14,7 +14,8 @@ public class RecallItems {
 	public static Item bindstone;
 	public static Item scroll;
 	public static Item ink;
-	public static Item craftingItem;
+	public static Item mortarPestle;
+	public static Item pearlDust;
 	
 	
 	public static void register(){
@@ -25,9 +26,14 @@ public class RecallItems {
 		GameRegistry.registerItem(scroll, "scroll");
 		
 		ink = new ItemInk().setUnlocalizedName(PATH+"ink").setCreativeTab(Recall.tab).setTextureName(PATH+"ink");
+		//ink.setContainerItem(ink);
 		GameRegistry.registerItem(ink, "ink");
 		
-		craftingItem = new RecallCraftingItem().setUnlocalizedName(PATH+"crafting").setCreativeTab(Recall.tab).setTextureName(PATH+"crafting");
-		GameRegistry.registerItem(craftingItem, "craftingItem");
+		mortarPestle = new RecallCraftingItem(RecallCraftingItem.MORTAR_AND_PESTLE).setUnlocalizedName(PATH+"crafting").setCreativeTab(Recall.tab).setTextureName(PATH+"crafting").setMaxStackSize(1);
+		//mortarPestle.setContainerItem(mortarPestle);
+		GameRegistry.registerItem(mortarPestle, "mortarAndPestle");
+		
+		pearlDust = new RecallCraftingItem(RecallCraftingItem.PEARL_DUST).setUnlocalizedName(PATH+"crafting").setCreativeTab(Recall.tab).setTextureName(PATH+"crafting");
+		GameRegistry.registerItem(pearlDust, "pearlDust");
 	}
 }

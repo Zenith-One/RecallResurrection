@@ -26,6 +26,7 @@ public class RecallItemWithSubtypes extends Item{
 		for (RecallSubtype t : RecallSubtype.values()){
 			subTypes.add(new MutablePair(t.title(), null));
 		}
+		
 	}
 	
 	

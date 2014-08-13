@@ -12,7 +12,7 @@ public class ClientErrorMessageStorage {
 	
 	
 	public static void setMessage(EntityPlayer player, IChatComponent message){
-		System.out.println("Setting message");
+		//System.out.println("Setting message");
 		INSTANCE.player  = player;
 		INSTANCE.message = message;
 	}

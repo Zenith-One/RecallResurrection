@@ -6,6 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import zenithmods.recall.common.CommonProxy;
 import zenithmods.recall.handler.ClientErrorMessageHandler;
+import zenithmods.recall.handler.RecallCraftingHandler;
 import zenithmods.recall.handler.RecallEventHandler;
 import zenithmods.recall.util.RecallSubtype;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -34,6 +35,8 @@ public class Recall {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		Config.load(event);
+		
 		tab = new CreativeTabs(Config.MODID){
 			public ItemStack getIconItemStack(){
 				return new ItemStack(RecallItems.bindstone, 1, RecallSubtype.BLUE.ordinal());
@@ -54,7 +57,10 @@ public class Recall {
 	public void load(FMLInitializationEvent event) {
 		channel = NetworkRegistry.INSTANCE.newEventDrivenChannel("recall");
 		MinecraftForge.EVENT_BUS.register(new RecallEventHandler());
+		FMLCommonHandler.instance().bus().register(new RecallCraftingHandler());
 		FMLCommonHandler.instance().bus().register(new ClientErrorMessageHandler());
+		
+		RecallRecipes.registerRecipes();
 	}
 	
 	@EventHandler

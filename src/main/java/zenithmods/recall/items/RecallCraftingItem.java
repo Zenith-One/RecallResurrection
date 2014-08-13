@@ -19,12 +19,13 @@ public class RecallCraftingItem extends Item {
 	
 	public static int MORTAR_AND_PESTLE = 0;
 	public static int PEARL_DUST = 1;
+	private int type;
 	
 	private ArrayList<MutablePair<String,IIcon>> subTypes = new ArrayList<MutablePair<String, IIcon>>();
 	
-	public RecallCraftingItem(){
+	public RecallCraftingItem(int type){
 		super();
-		this.setHasSubtypes(true);
+		this.type = type;
 		initializeSubtypes();
 	}
 	
@@ -34,31 +35,25 @@ public class RecallCraftingItem extends Item {
 	}
 	
 	@Override
-	@SideOnly(Side.CLIENT)
-	public void getSubItems(Item item, CreativeTabs tabs, List list) {
-		for (int i = 0; i < subTypes.size(); i++){
-			list.add(new ItemStack(item, 1, i));
-		}
+	public String getUnlocalizedName(ItemStack stack)
+	{
+		return super.getUnlocalizedName() + "." + subTypes.get(type).getLeft();
+		
 	}
 	
 	@Override
-	public String getUnlocalizedName(ItemStack stack)
-	{
-		return super.getUnlocalizedName() + "." + subTypes.get(stack.getItemDamage()).getLeft();
-	}
-	
 	@SideOnly(Side.CLIENT)
     public IIcon getIconFromDamage(int meta)
     {
-		return subTypes.get(meta).getRight();
+		return subTypes.get(type).getRight();
     }
 	
 	@SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister register)
     {
-		for (MutablePair<String, IIcon> pair : subTypes){
-			subTypes.set(subTypes.indexOf(pair), new MutablePair(pair.getLeft(), register.registerIcon(this.getIconString() + "/" + pair.getLeft())));
-		}
+		MutablePair<String, IIcon> pair = subTypes.get(type);
+		subTypes.set(subTypes.indexOf(pair), new MutablePair(pair.getLeft(), register.registerIcon(this.getIconString() + "/" + pair.getLeft())));
+		
     }
 
 }

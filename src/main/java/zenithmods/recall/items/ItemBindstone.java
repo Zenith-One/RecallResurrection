@@ -92,7 +92,7 @@ public class ItemBindstone extends RecallItemWithSubtypes{
     			ClientErrorMessageStorage.setMessage(player, msg);
     		}
     	} else {
-    		System.out.println("No bound player. Binding?");
+    		//System.out.println("No bound player. Binding?");
     		NBTTagCompound tag = new NBTTagCompound();
     		tag.setString("playerName", player.getDisplayName());
     		stack.setTagCompound(tag);

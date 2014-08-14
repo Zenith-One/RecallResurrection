@@ -36,7 +36,10 @@ public class ItemScroll extends RecallItemWithSubtypes{
 				Coord6D coords = RecallRegistry.getBoundCoords(playerName, RecallSubtype.getFromMeta(stack.getItemDamage()));
 				if (coords != null){
 					RecallTransporter.transport(player, coords);
-							
+					stack.splitStack(1);
+					if (stack.stackSize == 0){
+						return null;
+					}
 				}
 				
 			}
